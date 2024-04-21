@@ -36,7 +36,7 @@ public class User {
 	  @Column(name = "token") 
 	  private String token;
 
-  @Column(name = "published", nullable = true)
+  @Column(name = "active", nullable = true)
   private Boolean active;
   
   
