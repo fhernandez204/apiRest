@@ -1,26 +1,27 @@
-package com.apiRest.utils;
+package com.apiRest.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 import java.security.Key;
 import java.util.Date;
 
-/*
-    Our simple static class that demonstrates how to create and decode JWTs.
- */
+import static com.apiRest.utils.ReadProp.getProperties;
+
+
+@Service
 public class CreateJWT {
+    private static final Logger logger = LogManager.getLogger();
 
-    // The secret key. This should be in a property file NOT under source
-    // control and not hard coded in real life. We're putting it here for
-    // simplicity.
-    private static String SECRET_KEY = "oeRaYY7Wo24sDqKSX3IM9ASGmdGPmkTd9jo1QTy4b7P9Ze5_9hKolVX8xNrQDcNRfVEdTZNOuOyqEGhXEbdJI-ZQ19k_o9MI0y3eZN2lp9jow55FfXMiINEdt1XR85VipRLSOkT6kSpzs2x-jbLDiz9iFVzkd81YKxMgPA7VfZeQUm4n-mOmnWMaVX30zGFU4L3oPBctYKkl4dYfqYWqRNfrgPJVi5DGFjywgxx0ASEiJHtV72paI3fDR2XwlSkyhhmY-ICjCRmsJN4fX1pdoL8a18-aQrvyu4j0Os6dVPYIoPvvY0SAZtWYKHfM15g7A3HD4cVREf9cUsprCRK93w";
+    private String secretKey = getProperties().getProperty("pro.secret.key");
 
-    //Sample method to construct a JWT
-    public static String createJWT(String id, String issuer, String subject, long ttlMillis) {
+    public String createJWT(String id, String issuer, String subject, long ttlMillis) {
 
         //The JWT signature algorithm we will be using to sign the token
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
@@ -29,7 +30,7 @@ public class CreateJWT {
         Date now = new Date(nowMillis);
 
         //We will sign our JWT with our ApiKey secret
-        byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(SECRET_KEY);
+        byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(secretKey);
         Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 
         //Let's set the JWT Claims
@@ -51,10 +52,10 @@ public class CreateJWT {
     }
 
 	
-	  public static Claims decodeJWT(String jwt) {	  
+	  public Claims decodeJWT(String jwt) {
 		  //This line will throw an exception if it is not a signed JWS (as expected)   
 		  JwtParserBuilder jwtParserBuilder = Jwts.parser()
-		  .setSigningKey(DatatypeConverter.parseBase64Binary(SECRET_KEY));
+		  .setSigningKey(DatatypeConverter.parseBase64Binary(secretKey));
 		  Claims claims = jwtParserBuilder.build().parseClaimsJwt(jwt).getBody();
 		  //.parseClaimsJws(jwt).getBody(); 
 		  return claims; 
