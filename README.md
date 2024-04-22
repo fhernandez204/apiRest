@@ -6,7 +6,7 @@ REQUISITO:
 
 ● Banco de datos en memoria. H2.
 
-● Proceso de build vía Maven.
+● Proceso de build vía Gradle.
 
 ● Persistencia con JPA. Ejemplo: Hibernate.
 
