@@ -39,7 +39,7 @@ GET USUARIO POR ID
 
   http://localhost:8080/api/users/19152
 
- ![image](https://github.com/fhernandez204/francisco/blob/main/getUsers.png)
+ ![image](https://github.com/fhernandez204/apiRest/blob/master/getUsers.png)
 
 
  MODIFICAR USUARIO
