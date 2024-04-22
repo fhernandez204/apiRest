@@ -59,7 +59,6 @@ public class User {
     this.dateCreate = String.valueOf(new Date());
     this.dateModified  = String.valueOf(new Date());
     this.dateLastLogin  = String.valueOf(new Date());
-    //this.setPhones(phones);
   }
 
   public long getId() {

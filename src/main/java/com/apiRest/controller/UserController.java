@@ -1,6 +1,7 @@
 package com.apiRest.controller;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,8 +30,6 @@ import static com.apiRest.security.Constans.*;
 public class UserController {
 	
 	private static final Logger logger = LogManager.getLogger();
-
-    //private static final int JW_TIME_TO_LIVE = 800000; // used to calculate expiration (claim = exp)
 
       @Autowired
       UserRepository userRepository;
@@ -119,12 +118,12 @@ public class UserController {
   public ResponseEntity<User> updateUser(@PathVariable("id") long id, @RequestBody User user) {
     Optional<User> userData = userRepository.findById(id);
     if (userData.isPresent()) {
-      User _user = userData.get();
-      _user.setName(user.getName());
-      _user.setEmail(user.getEmail());
-      _user.setPassword(user.getPassword());
-      _user.setActive(user.getActive());
-      return new ResponseEntity<>(userRepository.save(user), HttpStatus.OK);
+        String jwt = new CreateJWTImpl().createJWT(user.getPassword(),user.getEmail(),  user.getName(),JW_TIME_TO_LIVE);
+        user.setDateModified(String.valueOf(new Date()));
+        user.setDateCreate(userData.get().getDateCreate());
+        user.setDateLastLogin(userData.get().getDateLastLogin());
+        user.setToken(jwt);
+        return new ResponseEntity<>(userRepository.save(user), HttpStatus.OK);
     } else {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

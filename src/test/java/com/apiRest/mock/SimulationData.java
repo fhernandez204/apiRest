@@ -2,10 +2,13 @@ package com.apiRest.mock;
 
 import com.apiRest.model.Phone;
 import com.apiRest.model.User;
+import com.apiRest.services.CreateJWTImpl;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static com.apiRest.security.Constans.JW_TIME_TO_LIVE;
 
 public class SimulationData {
 
@@ -24,6 +27,8 @@ public class SimulationData {
                     user.setActive(true);
                     user.setPhones(createPhones());
                     user.getPhones().get(0).setUser(user);
+        String token=createJWT(user);
+        user.setToken(token);
         return user;
     }
 
@@ -35,6 +40,15 @@ public class SimulationData {
         phone.setCitycode("5555555");
         listPhones.add(phone);
         return listPhones;
+    }
+
+    public static String createJWT(User user){
+        return new CreateJWTImpl().createJWT(
+                user.getPassword(), // claim = jti
+                user.getEmail(),    // claim = iss
+                user.getName(),     // claim = sub
+                JW_TIME_TO_LIVE
+        );
     }
 
 }
