@@ -17,6 +17,7 @@ REQUISITO:
 Patron de Diseño Utilizado: MVC.
 
 Diagrama de Clases:
+
 ![image](https://github.com/fhernandez204/apiRest/blob/master/diagrama%20clases.png)
 
 Estructura del Proyecto:
