@@ -14,7 +14,9 @@ REQUISITO:
 
 ● Java 8+, en este proyecto se uso java 17.
 
-Project Structure
+Patron de Diseño Utilizado: MVC.
+
+Estructura del Proyecto:
 
 ![image](https://github.com/fhernandez204/apiRest/blob/master/project%20structure.png)
 
