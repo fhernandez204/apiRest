@@ -27,7 +27,8 @@ CREAR USUARIO
 ![image](https://github.com/fhernandez204/apiRest/blob/master/createUser.png)
 
 SI EL CORREO YA EXISTE
-![image](https://github.com/fhernandez204/francisco/blob/master/createUser2.png)
+
+![image](https://github.com/fhernandez204/francisco/blob/main/createUser2.png)
 
 SI EL CORREO NO TIENE EL FORMATO CORRECTO
 
