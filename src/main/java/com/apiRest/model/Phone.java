@@ -2,6 +2,7 @@ package com.apiRest.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import lombok.Builder;
 
 @Entity
 @Table(name = "phones")

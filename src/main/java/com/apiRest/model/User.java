@@ -2,6 +2,8 @@ package com.apiRest.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Value;
 
 import java.util.Date;
 import java.util.List;
