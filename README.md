@@ -6,7 +6,7 @@ REQUISITO:
 
 ● Banco de datos en memoria. H2.
 
-● Proceso de build vía Maven.
+● Proceso de build vía Gradle.
 
 ● Persistencia con JPA. Ejemplo: Hibernate.
 
@@ -16,7 +16,7 @@ REQUISITO:
 
 Project Structure
 
-![image](https://github.com/fhernandez204/francisco/assets/35818550/73666b89-838a-470b-98ac-34b67f488b73)
+![image](https://github.com/fhernandez204/apiRest/blob/master/project%20structure.png)
 
 ENDPOINT
 
@@ -24,25 +24,25 @@ CREAR USUARIO
  http://localhost:8080/api/users
 
  
-![image](https://github.com/fhernandez204/francisco/blob/main/createUser.png)
+![image](https://github.com/fhernandez204/apiRest/blob/master/createUser.png)
 
 SI EL CORREO YA EXISTE
-![image](https://github.com/fhernandez204/francisco/blob/main/createUser2.png)
+![image](https://github.com/fhernandez204/francisco/blob/master/createUser2.png)
 
 SI EL CORREO NO TIENE EL FORMATO CORRECTO
 
-![image](https://github.com/fhernandez204/francisco/blob/main/createUser3.png)
+![image](https://github.com/fhernandez204/francisco/blob/master/createUser3.png)
 
 
 GET USUARIO
 
  http://localhost:8080/api/users
 
- ![image](https://github.com/fhernandez204/francisco/blob/main/getUsers.png)
+ ![image](https://github.com/fhernandez204/francisco/blob/master/getUsers.png)
 
 
  MODIFICAR USUARIO
 
  http://localhost:8080/api/users/13502
 
- ![image](https://github.com/fhernandez204/francisco/blob/main/putUser.png)
+ ![image](https://github.com/fhernandez204/francisco/blob/master/putUser.png)
