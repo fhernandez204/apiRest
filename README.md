@@ -27,22 +27,27 @@ CREAR USUARIO
 ![image](https://github.com/fhernandez204/apiRest/blob/master/createUser.png)
 
 SI EL CORREO YA EXISTE
-![image](https://github.com/fhernandez204/francisco/blob/master/createUser2.png)
+
+![image](https://github.com/fhernandez204/francisco/blob/main/createUser2.png)
 
 SI EL CORREO NO TIENE EL FORMATO CORRECTO
 
-![image](https://github.com/fhernandez204/francisco/blob/master/createUser3.png)
+![image](https://github.com/fhernandez204/francisco/blob/main/createUser3.png)
 
 
-GET USUARIO
+GET USUARIO POR ID
 
- http://localhost:8080/api/users
+  http://localhost:8080/api/users/19152
 
- ![image](https://github.com/fhernandez204/francisco/blob/master/getUsers.png)
+ ![image](https://github.com/fhernandez204/apiRest/blob/master/getUsers.png)
 
 
  MODIFICAR USUARIO
 
- http://localhost:8080/api/users/13502
+ http://localhost:8080/api/users/6352
 
- ![image](https://github.com/fhernandez204/francisco/blob/master/putUser.png)
+ ![image](https://github.com/fhernandez204/francisco/blob/main/putUser.png)
+
+ TestUnit
+ ![image](https://github.com/fhernandez204/francisco/blob/master/testUnit.png)
+ 
