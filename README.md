@@ -14,7 +14,9 @@ REQUISITO:
 
 ● Java 8+, en este proyecto se uso java 17.
 
-Project Structure
+Patron de Diseño Utilizado: MVC.
+
+Estructura del Proyecto:
 
 ![image](https://github.com/fhernandez204/apiRest/blob/master/project%20structure.png)
 
@@ -28,11 +30,11 @@ CREAR USUARIO
 
 SI EL CORREO YA EXISTE
 
-![image](https://github.com/fhernandez204/francisco/blob/main/createUser2.png)
+![image](https://github.com/fhernandez204/apiRest/blob/master/createUser2.png)
 
 SI EL CORREO NO TIENE EL FORMATO CORRECTO
 
-![image](https://github.com/fhernandez204/francisco/blob/main/createUser3.png)
+![image](https://github.com/fhernandez204/apiRest/blob/main/createUser3.png)
 
 
 GET USUARIO POR ID
@@ -46,8 +48,8 @@ GET USUARIO POR ID
 
  http://localhost:8080/api/users/6352
 
- ![image](https://github.com/fhernandez204/francisco/blob/main/putUser.png)
+ ![image](https://github.com/fhernandez204/apiRest/blob/master/putUser.png)
 
  TestUnit
- ![image](https://github.com/fhernandez204/francisco/blob/master/testUnit.png)
+ ![image](https://github.com/fhernandez204/apiRest/blob/master/testUnit.png)
  
