@@ -46,3 +46,7 @@ GET USUARIO
  http://localhost:8080/api/users/13502
 
  ![image](https://github.com/fhernandez204/francisco/blob/master/putUser.png)
+
+ TestUnit
+ ![image](https://github.com/fhernandez204/francisco/blob/master/testUnit.png)
+ 
