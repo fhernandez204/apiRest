@@ -35,11 +35,11 @@ SI EL CORREO NO TIENE EL FORMATO CORRECTO
 ![image](https://github.com/fhernandez204/francisco/blob/main/createUser3.png)
 
 
-GET USUARIO
+GET USUARIO POR ID
 
- http://localhost:8080/api/users
+  http://localhost:8080/api/users/19152
 
- ![image](https://github.com/fhernandez204/francisco/blob/master/getUsers.png)
+ ![image](https://github.com/fhernandez204/francisco/blob/main/getUsers.png)
 
 
  MODIFICAR USUARIO
