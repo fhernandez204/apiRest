@@ -46,7 +46,7 @@ GET USUARIO POR ID
 
  http://localhost:8080/api/users/6352
 
- ![image](https://github.com/fhernandez204/francisco/blob/main/putUser.png)
+ ![image](https://github.com/fhernandez204/apiRest/blob/master/putUser.png)
 
  TestUnit
  ![image](https://github.com/fhernandez204/francisco/blob/master/testUnit.png)
