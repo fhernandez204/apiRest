@@ -12,7 +12,7 @@ REQUISITO:
 
 ● Framework SpringBoot.
 
-● Java 8+
+● Java 8+, en este proyecto se uso java 17.
 
 Project Structure
 
