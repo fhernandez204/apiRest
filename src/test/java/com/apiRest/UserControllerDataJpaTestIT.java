@@ -18,8 +18,6 @@ import static org.assertj.core.api.Assertions.assertThat;
  **/
 @DataJpaTest
 public class UserControllerDataJpaTestIT {
-    @Autowired
-    private TestEntityManager entityManager;
 
     @Autowired
     private UserRepository userRepository;
