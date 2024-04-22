@@ -25,6 +25,7 @@ public class SimulationData {
                     user.setDateModified(String.valueOf(new Date()));
                     user.setDateLastLogin((String.valueOf(new Date())));
                     user.setActive(true);
+                    user.setPassword("1234567");
                     user.setPhones(createPhones());
                     user.getPhones().get(0).setUser(user);
         String token=createJWT(user);
