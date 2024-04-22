@@ -44,9 +44,9 @@ GET USUARIO POR ID
 
  MODIFICAR USUARIO
 
- http://localhost:8080/api/users/13502
+ http://localhost:8080/api/users/6352
 
- ![image](https://github.com/fhernandez204/francisco/blob/master/putUser.png)
+ ![image](https://github.com/fhernandez204/francisco/blob/main/putUser.png)
 
  TestUnit
  ![image](https://github.com/fhernandez204/francisco/blob/master/testUnit.png)
