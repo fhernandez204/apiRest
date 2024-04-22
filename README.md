@@ -17,6 +17,7 @@ REQUISITO:
 Project Structure
 
 ![image](https://github.com/fhernandez204/francisco/assets/35818550/73666b89-838a-470b-98ac-34b67f488b73)
+![image](https://github.com/fhernandez204/francisco/blob/main/project structure.png)
 
 ENDPOINT
 
