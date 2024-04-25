@@ -56,4 +56,7 @@ GET USUARIO POR ID
 
  TestUnit
  ![image](https://github.com/fhernandez204/apiRest/blob/master/testUnit.png)
- 
+
+ Swagger
+
+ http://localhost:8080/swagger-ui/index.html
