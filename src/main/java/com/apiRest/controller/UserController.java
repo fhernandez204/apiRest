@@ -118,11 +118,18 @@ public class UserController {
     Optional<User> userData = userRepository.findById(id);
     if (userData.isPresent()) {
         String jwt = new CreateJWTImpl().createJWT(user.getPassword(),user.getEmail(),  user.getName(),JW_TIME_TO_LIVE);
-        user.setDateModified(String.valueOf(new Date()));
-        user.setDateCreate(userData.get().getDateCreate());
-        user.setDateLastLogin(userData.get().getDateLastLogin());
-        user.setToken(jwt);
-        return new ResponseEntity<>(userRepository.save(user), HttpStatus.OK);
+        User _user = userData.get();
+        _user.setName(user.getName());
+        _user.setEmail(user.getEmail());
+        _user.setPassword(user.getPassword());
+        user.setActive(user.getActive() == null || user.getActive());
+
+        _user.setActive(user.getActive());
+        _user.setDateModified(String.valueOf(new Date()));
+        _user.setDateCreate(userData.get().getDateCreate());
+        _user.setDateLastLogin(userData.get().getDateLastLogin());
+        _user.setToken(jwt);
+        return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
     } else {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
